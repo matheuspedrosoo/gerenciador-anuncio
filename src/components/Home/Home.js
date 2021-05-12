@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './home.scss'
 
 function Home() {
+  // base de dados
   const dataAnuncios = [
     {
       id: 1,
@@ -79,6 +80,7 @@ function Home() {
     }))
   }
 
+  // add novo anúncio
   const NovoAnuncio = () => {
     let verifica = anuncioSelecionado
 
@@ -110,7 +112,7 @@ function Home() {
       setModalInserir(false)
     }
   }
-
+  // realiza a busca pelo nome do cliente
   useEffect(() => {
     const filter = data.filter(cli =>
       cli.cliente.toLowerCase().includes(buscaAnuncio.toLowerCase())
@@ -118,6 +120,7 @@ function Home() {
     setFiltro(filter)
   }, [buscaAnuncio, data])
 
+  // retorna o número de vizualizações
   function getView(vizualizacoes) {
     let cliques = 0
     let compartilhamentos = 0
@@ -144,6 +147,7 @@ function Home() {
     return vizualizacoes
   }
 
+  // retorna o número de cliques
   function getClick(vizualizacoes) {
     let cliques = 0
     let compartilhamentos = 0
@@ -170,6 +174,7 @@ function Home() {
     return cliques
   }
 
+  // retorna o número de compartilhamentos
   function getShare(vizualizacoes) {
     let cliques = 0
     let compartilhamentos = 0
@@ -196,6 +201,7 @@ function Home() {
     return compartilhamentos
   }
 
+  // retorna a diferença entre data de início e data final
   function daysBetween(startDate, endDate) {
     var diff = moment(endDate, 'DD/MM/YYYY').diff(
       moment(startDate, 'DD/MM/YYYY')
