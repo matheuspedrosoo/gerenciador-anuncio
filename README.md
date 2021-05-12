@@ -7,7 +7,9 @@ Sistema desenvolvido para gerenciar anúncios, onde é exibida uma lista de todo
 ## Tecnologias utilizadas
 
  <li>React</li>
+ <li>HTML</li>
  <li>Javascript</li>
+ <li>Node</li>
  <li>SASS</li>
 
 ## Executar Projeto
